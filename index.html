@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Portfólio de Marcela França: social media e estrategista de conteúdo. Designs, vídeos, copys e resultados.">
+<style>*{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Marcela França</title>
+<link id="fonts" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..800,100&family=Hanken+Grotesk:wght@400;500;600&display=swap">
+<style id="css">
+/* Layout: split hero (nome + foto em arco) → designs em colunas → vídeos 9:16 em rolagem → copys como legendas → faixa verde de contato */
+:root{
+  --verde:#2e4733; --bege:#fffcef; --ink:#1f2b22; --muted:#5d6a5f; --sage:#dfe5d6; --line:rgba(46,71,51,.16); --surface:#ffffff; --on-verde:#fffcef;
+  --display:"Cooper BT","Cooper Black","Fraunces",Georgia,serif;
+  --body:"Cooper Hewitt","Hanken Grotesk",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--verde:#b9cbab;--bege:#16211a;--ink:#f1eedf;--muted:#a9b3a6;--sage:#223127;--line:rgba(241,238,223,.14);--surface:#1d2a21;--on-verde:#16211a;color-scheme:dark}}
+:root[data-theme="dark"]{--verde:#b9cbab;--bege:#16211a;--ink:#f1eedf;--muted:#a9b3a6;--sage:#223127;--line:rgba(241,238,223,.14);--surface:#1d2a21;--on-verde:#16211a;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bege);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-variation-settings:"SOFT" 100;font-weight:700;text-wrap:balance;margin:0;color:var(--verde);line-height:1.05}
+.label{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--muted)}
+a{color:inherit}
+section{padding-block:clamp(48px,8vw,96px)}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:32px}
+.sec-head h2{font-size:clamp(2rem,5vw,3.2rem)}
+.more{font-weight:600;color:var(--verde);text-decoration:none;border-bottom:1.5px solid currentColor;padding-bottom:2px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.25fr .9fr;gap:clamp(28px,6vw,72px);align-items:center;padding-block:clamp(40px,7vw,88px) clamp(32px,5vw,56px)}
+.hero>div{min-width:0}
+.hero h1{font-size:clamp(3rem,9vw,6.2rem);letter-spacing:-.02em}
+.hero .role{font-size:1.15rem;font-weight:500;margin:18px 0 0;color:var(--ink)}
+.hero .bio{color:var(--muted);max-width:56ch;margin:16px 0 0;white-space:pre-wrap}
+.hero .local{margin-top:22px}
+.hero .dot{color:var(--muted);margin-inline:4px}
+.exp-label{margin-top:28px}
+.exp{list-style:none;margin:10px 0 0;padding:0;border-top:1px solid var(--line);max-width:560px}
+.exp li{display:grid;grid-template-columns:150px 1fr;gap:6px 18px;padding-block:14px;border-bottom:1px solid var(--line);align-items:baseline}
+.exp .per{font-size:.85rem;font-weight:600;color:var(--muted);font-variant-numeric:tabular-nums}
+.exp-main{display:flex;flex-direction:column;min-width:0}
+.exp strong{font-family:var(--display);font-weight:700;font-size:1.2rem;color:var(--verde);line-height:1.2}
+.exp .onde{color:var(--ink);font-size:.95rem}
+@media (max-width:480px){.exp li{grid-template-columns:1fr}}
+.arch{aspect-ratio:4/5;max-width:100%;width:100%;border-radius:999px 999px 18px 18px;overflow:hidden;background:var(--sage);display:grid;place-items:center;position:relative}
+.arch img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
+.mono{font-family:var(--display);font-size:clamp(4rem,12vw,7rem);color:var(--verde);font-weight:800}
+.nichos{border-block:1px solid var(--line);padding-block:18px;display:flex;flex-wrap:wrap;gap:8px 28px;font-family:var(--display);font-size:clamp(1.05rem,2.4vw,1.35rem);color:var(--verde)}
+.nichos .label{font-family:var(--body);align-self:center;margin-right:4px}
+
+/* designs */
+.designs{columns:3 260px;column-gap:18px}
+.design{break-inside:avoid;margin:0 0 18px;position:relative}
+.design img{width:100%;border-radius:10px;display:block;cursor:zoom-in;background:var(--sage)}
+.cap{display:flex;gap:10px;align-items:baseline;margin-top:8px;font-size:.92rem}
+.cap strong{font-weight:600}
+.cap span{color:var(--muted)}
+
+/* carrosséis */
+.carrs{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,290px),1fr));gap:32px 22px;align-items:start}
+.carr{position:relative;min-width:0;display:flex;flex-direction:column;gap:12px}
+.carr .tools{top:10px;left:10px;right:auto}
+.frame{position:relative;aspect-ratio:4/5;max-width:100%;border-radius:14px;overflow:hidden;background:var(--sage);box-shadow:0 22px 44px -26px rgba(31,43,34,.55)}
+.track{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
+.track::-webkit-scrollbar{display:none}
+.track img{flex:0 0 100%;width:100%;height:100%;object-fit:cover;scroll-snap-align:start;cursor:zoom-in;display:block}
+.nav{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;border:0;background:rgba(255,252,239,.92);color:#2e4733;font-size:1.5rem;line-height:1;cursor:pointer;display:grid;place-items:center;box-shadow:0 2px 10px rgba(0,0,0,.2);padding:0 0 3px}
+.prev{left:10px}.next{right:10px}
+.count{position:absolute;top:10px;right:10px;background:rgba(20,30,22,.72);color:#fffcef;font-size:.75rem;font-weight:600;padding:3px 10px;border-radius:999px;font-variant-numeric:tabular-nums}
+.dots{display:flex;gap:6px;justify-content:center}
+.dots i{width:6px;height:6px;border-radius:3px;background:var(--line);transition:width .25s}
+.dots i.on{background:var(--verde);width:18px}
+.carr-meta h3{font-size:1.4rem;margin-top:4px}
+.carr-meta p{margin:6px 0 0;color:var(--muted);font-size:.95rem}
+.slot{aspect-ratio:4/5;width:100%;max-width:100%;border:1.5px dashed var(--line);border-radius:14px;background:transparent;color:var(--muted);font:600 .95rem/1.5 var(--body);cursor:pointer;display:grid;place-items:center;padding:24px;text-align:center}
+.slot small{font-weight:400;font-size:.82rem}
+.slot:hover{border-color:var(--verde);color:var(--verde)}
+
+/* videos */
+.reels{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px}
+.reel{flex:0 0 clamp(200px,26vw,250px);scroll-snap-align:start;position:relative}
+.reel video{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:16px;background:#111;display:block;box-shadow:0 22px 44px -26px rgba(31,43,34,.55)}
+.vcap{display:flex;flex-direction:column;gap:2px;margin-top:10px}
+.vcap strong{font-family:var(--display);font-size:1.15rem;color:var(--verde);line-height:1.2;font-weight:700}
+.wrap .reels.hrow{align-items:flex-start;padding-bottom:4px}
+.wrap .reels.hrow>*{flex-basis:calc((100% - 54px)/4)}
+@media (max-width:900px){.wrap .reels.hrow>*{flex-basis:calc((100% - 36px)/3)}}
+@media (max-width:600px){.wrap .reels.hrow>*{flex-basis:62%}}
+
+/* copys */
+.copys{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.copy{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:10px;min-width:0;position:relative}
+.copy h3{font-size:1.35rem}
+.copy .txt{white-space:pre-wrap;color:var(--ink);font-size:.97rem;overflow-wrap:anywhere}
+
+/* cursos */
+.cursos{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:22px}
+.curso{border-top:2px solid var(--verde);padding-top:14px;position:relative;display:flex;flex-direction:column;gap:4px;min-width:0}
+.curso strong{font-family:var(--display);font-size:1.4rem;color:var(--verde);line-height:1.2}
+.curso span{color:var(--muted);font-size:.92rem}
+.editing .curso .tools{top:-40px;right:0}
+
+/* fileira de copys */
+.wrap .hrow{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:4px;overscroll-behavior-x:contain;columns:auto}
+.hrow::-webkit-scrollbar{display:none}
+.hrow>*{flex:0 0 calc((100% - 36px)/3);min-width:0;scroll-snap-align:start}
+.wrap .carrs.hrow{align-items:flex-start}
+@media (max-width:900px){.hrow>*{flex-basis:calc((100% - 18px)/2)}}
+@media (max-width:600px){.hrow>*{flex-basis:86%}}
+.cnav{display:flex;align-items:center;justify-content:flex-end;gap:12px;margin:-12px 0 16px}
+.cbtn{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--verde);background:transparent;color:var(--verde);font-size:1.2rem;cursor:pointer;display:grid;place-items:center}
+.cbtn:hover:not(:disabled){background:var(--verde);color:var(--on-verde)}
+.cbtn:disabled{opacity:.3;cursor:default}
+.ccount{font-size:.85rem;font-weight:600;color:var(--muted);font-variant-numeric:tabular-nums;min-width:7ch;text-align:center}
+
+/* flip cards */
+.fcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
+.fc{perspective:1400px;cursor:pointer;min-width:0;position:relative;border-radius:16px}
+.fc .inner{display:grid;height:100%;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.fc.flipped .inner{transform:rotateY(180deg)}
+.face{grid-area:1/1;-webkit-backface-visibility:hidden;backface-visibility:hidden;border-radius:16px;padding:26px;display:flex;flex-direction:column;gap:10px;min-height:320px;min-width:0}
+.face.front{background:var(--surface);border:1px solid var(--line)}
+.face.front h3{font-size:1.4rem}
+.face.front .txt{white-space:pre-wrap;font-size:.93rem;line-height:1.55;overflow-wrap:anywhere}
+.face.front .txt.clamp:not(.open){max-height:16em;overflow:hidden;-webkit-mask-image:linear-gradient(#000 70%,transparent);mask-image:linear-gradient(#000 70%,transparent)}
+.more{align-self:flex-start;background:none;border:0;padding:0;font:600 .88rem var(--body);color:var(--verde);border-bottom:1.5px solid currentColor;cursor:pointer}
+.face.back{background:var(--verde);color:var(--on-verde);transform:rotateY(180deg)}
+.face.back .label{color:var(--on-verde);opacity:.75}
+.mets{display:flex;flex-direction:column;gap:18px;margin-top:6px}
+.met b{display:block;font-family:var(--display);font-variation-settings:"SOFT" 100;font-size:clamp(2.2rem,4.5vw,2.8rem);line-height:1;font-weight:800;font-variant-numeric:tabular-nums}
+.met span{font-size:.95rem;opacity:.85}
+.hint{margin-top:auto;padding-top:8px;font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.face.back .hint{color:var(--on-verde);opacity:.7}
+.fc.edit{cursor:default;display:flex;flex-direction:column;gap:8px}
+.fc.edit .face{transform:none;-webkit-backface-visibility:visible;backface-visibility:visible;min-height:0}
+.mets-raw{white-space:pre-wrap;font-variant-numeric:tabular-nums}
+.editing .face.back [data-field]{outline-color:color-mix(in srgb,var(--on-verde) 55%,transparent)}
+@media (prefers-reduced-motion:reduce){.fc .inner{transition:none}}
+
+/* contato */
+.contato{background:var(--verde);color:var(--on-verde)}
+.contato h2{color:var(--on-verde);font-size:clamp(2.4rem,7vw,4.6rem)}
+.contato .label{color:var(--on-verde);opacity:.75}
+.c-grid{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.btn{font:600 1rem var(--body);border-radius:999px;padding:12px 22px;border:1.5px solid currentColor;background:transparent;color:inherit;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.btn.solid{background:var(--on-verde);color:var(--verde);border-color:var(--on-verde)}
+.c-mail{user-select:all}
+footer{padding-block:24px;font-size:.85rem;color:var(--muted)}
+
+/* empty + edit */
+.empty{border:1.5px dashed var(--line);border-radius:14px;padding:40px 24px;text-align:center;color:var(--muted)}
+.editing [data-field]{outline:1.5px dashed color-mix(in srgb,var(--verde) 45%,transparent);outline-offset:4px;border-radius:4px;cursor:text}
+.editing [data-field]:focus{outline-style:solid}
+.tools{position:absolute;top:8px;right:8px;display:flex;gap:4px;z-index:2}
+.tools button,.addbtn{font:600 .8rem var(--body);background:var(--bege);color:var(--verde);border:1px solid var(--line);border-radius:999px;padding:6px 10px;cursor:pointer}
+.addbtn{padding:10px 18px;font-size:.92rem;background:var(--verde);color:var(--on-verde);border:0}
+.photo-btn{position:absolute;bottom:14px;left:50%;transform:translateX(-50%)}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--surface);border-top:1px solid var(--line);padding-block:12px calc(12px + env(safe-area-inset-bottom,0px));padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;gap:10px;align-items:center;justify-content:flex-end;flex-wrap:wrap}
+.bar .msg{margin-right:auto;font-size:.9rem;color:var(--muted)}
+.bar .btn{color:var(--verde)}
+.bar .btn.solid{background:var(--verde);color:var(--on-verde);border-color:var(--verde)}
+.fab{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:20;background:var(--verde);color:var(--on-verde);border:0;box-shadow:0 6px 20px rgba(0,0,0,.18)}
+.editing{padding-bottom:90px}
+button:focus-visible,a:focus-visible{outline:2px solid var(--verde);outline-offset:3px}
+.lb{position:fixed;inset:0;z-index:30;background:rgba(10,16,12,.88);display:grid;place-items:center;padding:24px;cursor:zoom-out}
+.lb img{max-height:90vh;max-width:100%;border-radius:8px}
+
+@media (max-width:720px){
+  .hero{grid-template-columns:1fr}
+  .arch{max-width:340px;justify-self:center;grid-row:1}
+}
+@media (prefers-reduced-motion:no-preference){.design img,.reel video{transition:transform .25s ease}.design img:hover{transform:translateY(-3px)}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script type="application/json" id="state">{"nome": "Marcela França", "idade": "22 anos", "titulo": "Estudante de Publicidade e Propaganda", "experiencias": [{"cargo": "Estrategista de conteúdos", "onde": "Brava Marketing", "periodo": "mai/2026 – atual"}, {"cargo": "Social media independente", "onde": "Clientes próprios", "periodo": "fev/2025 – atual"}, {"cargo": "Assistente administrativo", "onde": "", "periodo": "2019 – mai/2025"}], "local": "Betim · Minas Gerais", "nichos": ["Odontologia", "Academia", "Buffet infantil", "Decoração de festas", "Sustentabilidade urbana", "Agência de marketing", "Maquiagem", "Incorporadora"], "foto": {"id": "3c19dbb9718c989540199012e21c3c35", "url": "img/foto-marcela.jpg"}, "cursos": [{"nome": "Marketing nas mídias sociais", "onde": ""}, {"nome": "Marketing de redes sociais", "onde": ""}], "designs": [{"titulo": "Social media ou escravo moderno?", "cliente": "Carrossel autoral · marca pessoal", "descricao": "Abre com uma pergunta provocativa, mostra o que uma social media faz, quebra objeções com humor e fecha convidando para trabalhar junto.", "slides": [{"id": "84678ff1c73f100b6d9a1679b783f0cb", "url": "img/design1-01.jpg"}, {"id": "98ead7b98213c5665c7cab4a4f17218f", "url": "img/design1-02.jpg"}, {"id": "ac1212854c3d6750f9319da7e48e9263", "url": "img/design1-03.jpg"}, {"id": "fbabea485ad1367b6931b78622dbcab9", "url": "img/design1-04.jpg"}, {"id": "730113d64d85a40cc7c62ac45299d0ae", "url": "img/design1-05.jpg"}, {"id": "c9f30cd3e17801094b382f4560a5f160", "url": "img/design1-06.jpg"}]}, {"titulo": "Inegociáveis para a festa do seu filho", "cliente": "VivAventura · salão de festas infantis", "descricao": "Carrossel educativo para mães e pais: mostra os cuidados que fazem diferença no dia da festa (pontualidade, som ambiente, fornecedores e contrato) e fecha puxando conversa com o público.", "formato": "4/5", "slides": [{"id": "cfb64827b1cd7832eab07baebf0a7ad7", "url": "img/design2-01.jpg"}, {"id": "02c8f08fb73fdd1de1e41a02b3f1ed55", "url": "img/design2-02.jpg"}, {"id": "528859abda04266af981bca9df0c7c53", "url": "img/design2-03.jpg"}, {"id": "5811c9537c41bdea1cd1f772e6e9b1b5", "url": "img/design2-04.jpg"}, {"id": "f4939c3b7449cb6778829a54abc6b182", "url": "img/design2-05.jpg"}, {"id": "5f1861be4fb7c6f59901f7fbdf1b3a1f", "url": "img/design2-06.jpg"}]}, {"titulo": "Não vendemos festa completa", "cliente": "VivAventura · stories", "descricao": "Sequência de stories que transforma uma possível objeção em diferencial: explica por que o salão não vende pacote fechado e mostra a liberdade de escolha que isso dá à família.", "formato": "9/16", "slides": [{"id": "bc71639826ba0a46d04bff86da7f11fc", "url": "img/design3-01.jpg"}, {"id": "d6e745e2d587e4770debf23014c7ecaa", "url": "img/design3-02.jpg"}, {"id": "82905cbe4603dbb4208a9d9998a9ecb4", "url": "img/design3-03.jpg"}, {"id": "38b7b71219222f92644a1a8ca7790ba9", "url": "img/design3-04.jpg"}, {"id": "b019beaa1cc6fcdd62f677405573351d", "url": "img/design3-05.jpg"}, {"id": "fdddedf429a4b5bfa14953713ba75dbc", "url": "img/design3-06.jpg"}]}], "videos": [{"id": "49b4b9be1794c13db3f648c8e628a23b", "url": "videos/video-v1.mp4", "poster": "img/video-p1.jpg", "titulo": "Cardápio que dá vontade", "cliente": "Festas · gastronomia"}, {"id": "e7c618e0bf370d4e475d2cbb5dd84292", "url": "videos/video-v2.mp4", "poster": "img/video-p2.jpg", "titulo": "Dicas para planejar a festa", "cliente": "Salão de festas infantis"}, {"id": "90326a5dfa99c1167937fab6025142f9", "url": "videos/video-v3.mp4", "poster": "img/video-p3.jpg", "titulo": "Apresentando o espaço", "cliente": "Salão de festas infantis"}, {"id": "89fd94b9fbfa251d1c3c565c48408bde", "url": "videos/video-v4.mp4", "poster": "img/video-p4.jpg", "titulo": "Tour pelo salão", "cliente": "Salão de festas infantis"}, {"id": "87155a0a57224ff5ab547753f7fe6e12", "url": "videos/video-v5.mp4", "poster": "img/video-p5.jpg", "titulo": "A festa acontecendo", "cliente": "Salão de festas infantis"}, {"id": "0a8695632a308682065730d84f12ae1d", "url": "videos/video-v6.mp4", "poster": "img/video-p6.jpg", "titulo": "Organizando a festa", "cliente": "Salão de festas infantis"}, {"id": "f344f40df33935b4e8517546d20e2bbd", "url": "videos/video-v7.mp4", "poster": "img/video-p7.jpg", "titulo": "Estrutura completa", "cliente": "Salão de festas infantis"}, {"id": "b993d98ffaf978e3e39e998140d4060c", "url": "videos/video-v8.mp4", "poster": "img/video-p8.jpg", "titulo": "Bastidores da decoração", "cliente": "Decoração de festas"}], "numeros": [{"cliente": "Sustentabilidade urbana · perfil completo", "titulo": "30 dias de gestão do perfil", "texto": "Gestão completa do perfil de um projeto de arborização urbana: pauta educativa sobre árvores nativas e biodiversidade, carrosséis, posts estáticos e stories, com linguagem próxima e dados para gerar conversa e compartilhamento.", "metricas": "248.296 | visualizações em 30 dias\n52.908 | pessoas alcançadas\n13.662 | interações\n+839 | seguidores líquidos"}, {"cliente": "Sustentabilidade urbana · carrossel", "titulo": "“Se plantássemos uma árvore hoje…”", "texto": "Carrossel educativo que parte de uma pergunta simples para mostrar o impacto de plantar uma árvore. Teve o maior alcance e o maior número de envios entre os posts destacados aqui.", "metricas": "57.736 | visualizações\n31.292 | contas alcançadas\n2,6 mil | curtidas\n816 | envios por direct\n194 | novos seguidores"}, {"cliente": "Sustentabilidade urbana · carrossel", "titulo": "“Nós não somos a favor de cortar uma árvore”", "texto": "Abertura polêmica para explicar por que árvores exóticas prejudicam a biodiversidade local, com dado de pesquisa e chamada para compartilhar.", "metricas": "13.168 | visualizações\n7.498 | contas alcançadas\n901 | curtidas\n103 | reposts\n92 | novos seguidores"}, {"cliente": "Sustentabilidade urbana · conteúdo de utilidade", "titulo": "9 árvores nativas para cultivar na calçada", "texto": "Conteúdo prático em formato de lista, feito para ser guardado e consultado depois. Por isso o destaque nos salvamentos.", "metricas": "10.398 | visualizações\n6.046 | contas alcançadas\n603 | curtidas\n219 | salvamentos\n53 | novos seguidores"}], "copys": [{"cliente": "Sustentabilidade urbana", "titulo": "Árvore nativa trabalha pela cidade", "texto": "Nós não somos a favor de cortar uma árvore.\nA não ser que essa árvore esteja prejudicando a biodiversidade da cidade.\n\n\"Das 10 espécies mais utilizadas na arborização urbana brasileira, 80% são exóticas. Cidades verdes na aparência, mas que contribuem pouco para a biodiversidade local.\"\n(Fonte: Revista Brasileira de Geografia Física, 2023)\n\nE qual é o problema disso?\nÁrvores exóticas não servem como fonte de alimento para os pássaros locais. Não colaboram com a polinização das abelhas nativas ou pior…\nalgumas espécies exóticas se tornam invasoras e passam a competir diretamente com as árvores nativas, sendo em alguns casos tóxicas para elas e para os polinizadores, desequilibrando o ecossistema inteiro.\n\nUma árvore nativa não é só verde.\nEla evoluiu junto com a fauna local e assim, além de filtrarem o ar e contribuírem para o conforto térmico, também fornecem abrigo e alimento para os pássaros, atrai abelhas, borboletas e outros polinizadores e retém partículas de poeira.\n\nEla trabalha pela cidade. Porque pertence a ela.\n\nVocê sabia disso? Compartilha esse conteúdo com quem precisa descobrir.", "metricas": "13.168 | visualizações\n7.498 | contas alcançadas\n901 | curtidas\n143 | envios por direct\n92 | novos seguidores"}, {"cliente": "Odontopediatria", "titulo": "Dentista não precisa ser sinônimo de medo", "texto": "Quando a criança só vai ao dentista em emergência, ela sempre chega com dor, com medo, sem entender o que está acontecendo.\nE aí o cérebro dela faz uma associação simples e automática:\ndentista = dor = medo.\nEsse registro fica. E pode durar a vida inteira.\n\nAgora pensa comigo.\nSe você faz a prevenção correta, as emergências tendem a não acontecer.\nE quando seu filho vai ao consultório, não tem dor, não tem susto, não tem choro, só cuidado e atenção.\n\nIr ao dentista pode e deve ser leve para a sua criança.\nIsso começa com uma decisão sua: não esperar a dor chegar para agir.\n\nClique no link da bio e comece a cuidar da saúde bucal do seu filho", "metricas": ""}, {"cliente": "Odontopediatria", "titulo": "Dente que não quebrou também precisa de avaliação", "texto": "Não é porque o dente não quebrou, que significa que ele está tudo bem.\nDepois de uma queda, mesmo sem quebrar, um dente que sofreu impacto pode ter lesões que o olho dos pais não consegue ver.\nE é exatamente aí que mora o perigo.\n\nDente que ficou levemente mole.\nDente que foi empurrado para dentro ou para fora do lugar.\nRaiz que sofreu impacto sem nenhum sinal visível por fora.\n\nTudo isso é traumatismo e tudo isso precisa de avaliação.\nNesses casos, a única forma de saber se está tudo bem de verdade é com uma consulta e, muitas vezes, uma radiografia.\nSó o olhar clínico da odontopediatra consegue identificar o que não aparece na superfície.\n\nEntão se seu filho caiu e bateu a boca, mesmo que pareça estar tudo bem o ideal é marcar uma consulta.", "metricas": ""}, {"cliente": "Imóveis de alto padrão", "titulo": "Wellness já decide a compra do alto padrão", "texto": "Pesquisas apontam: o wellness já influencia a decisão de escolha do público de alta renda.\nEsse estilo de vida não influencia só a faixa etária que vai comprar, ele acompanha a faixa de renda.\n\nDados mostram: acima de R$ 20 mil, 39% dos compradores optam por wellness. Acima de R$ 5 mil, esse número cai para 22%.\n(Fonte: Brain Inteligência Estratégica)\n\nO que isso significa?\nImóveis de alto padrão estão sendo valorizados pela estrutura wellness que oferecem. É isso que o locatário de alto padrão quer.\nMas esse estilo de arquitetura não se limita ao alto padrão: de R$ 5 mil a R$ 20 mil mensais, a porcentagem de influência positiva varia de 76% a 79%.\n\nComo esses dados mudam a forma de pensar o produto imobiliário do futuro?\n• Áreas comuns.\n• Posicionamento.\n• Áreas verdes.\n• Piscinas.\n\nInvestir em imóveis que integram o morador ao ambiente é pensar no futuro — e o público já espera por isso.", "metricas": ""}, {"cliente": "Centro comercial", "titulo": "Sua loja não fica isolada", "texto": "Buscando uma loja comercial, mas tem medo da vizinhança?\nNo Jardim Mall, a gente faz essa curadoria pra você.\n\nExiste uma teoria no varejo chamada Atração Cumulativa: lojas compatíveis, quando ficam perto, vendem mais juntas do que sozinhas.\nO cliente vem por um motivo e aproveita para resolver outro.\nFoi cortar o cabelo e saiu com uma roupa nova só porque passou por uma loja masculina a caminho da barbearia.\n\nIsso não é por acaso.\nO tenant mix planeja para somar fluxo com a vizinha, não competir com ela.\n\nExemplos claros disso:\n• Barbearia perto de loja de roupa.\n• Pet shop perto de clínica veterinária.\n• Salão de beleza em frente a estúdios de pilates.\n\nQuando o público-alvo é parecido, a oportunidade é dobrada.\nPor isso, no Jardim Mall, sua loja não fica isolada.", "metricas": ""}, {"cliente": "Odontopediatria", "titulo": "Personagens que sairiam das telas direto para o consultório", "texto": "Personagens que sairiam das telas direto para o meu consultório\n\nStitch: mordida aberta! Os dentes de trás se encostam, mas os da frente não. Costuma estar relacionada a hábitos como chupar dedo ou chupeta, respiração pela boca e uso prolongado de mamadeira. Quando não intervimos no momento certo pode afetar a fala, mastigação e o desenvolvimento da arcada dentária.\n\nBob Esponja: O espacinho entre os dentes é um diastema, muito comum também em crianças. Na dentição decídua (dentes de leite) é inclusive desejável a presença de diastemas.\n\nFera: Quando os dentes inferiores são mais projetados que os superiores. Mordidas assim merecem uma atenção especial e quanto antes intervirmos melhor!\n\nOlaf: Dois dentes se uniram formando um só! Isso é uma fusão dentária. Mais comum de acontecer na infância, mas pode afetar os dentes permanentes também.\n\nRaiva, de Divertida Mente: O ranger e apertar de dentes é um sinal de bruxismo, que é causado muitas vezes pelo estresse excessivo…\n\nVocê já tinha reparado nesses detalhes?\nCompartilhe com aquela pessoa que agora nunca mais vai conseguir assistir a esses personagens sem olhar para os dentes!", "metricas": ""}, {"cliente": "Odontopediatria", "titulo": "Seu filho não larga a chupeta?", "texto": "Você já tentou de tudo para tirar a chupeta do seu filho ou fazer ele parar de chupar dedo, mas parece que nada funciona?\n\nCerca de 44% das crianças brasileiras menores de 2 anos usam chupeta e 30% chupam o dedo. Para muitas famílias, deixar esses hábitos para trás pode ser um desafio.\n\nPor isso, fale sobre o assunto. Livros infantis, como Tchau, Chupeta!, ajudam a criança a entender que está chegando a hora de deixar o bico de lado, de uma forma lúdica e sem pressão.\n\nOutra dica muito eficaz: crie um desafio de 7 dias. A cada dia sem chupeta ou bico, a criança marca na tabelinha. No final, ela pode ganhar um presente combinado com você.\n\nExistem também os adesivos quebra-hábito, que podem ajudar crianças que chupam o dedo, tornando a sucção menos agradável e, aos poucos, ajudando a criança a deixar esse hábito.\n\nDeixar o bico ou o dedo de lado pode ser difícil, mas cuidar desse hábito hoje faz a diferença: ajuda a prevenir alterações na posição dos dentes e na mordida.\n\nSeu filho não larga a chupeta? Isso pode ajudar!", "metricas": ""}, {"cliente": "Natação infantil", "titulo": "Férias na praia e seu filho ainda não sabe nadar?", "texto": "Você já reservou a casa de praia para o final do ano, comprou o maiô do seu filho, mas lembrou que ele ainda não sabe nadar?\nE aí bate aquela preocupação: “Preciso comprar boia e a supervisão dobrada.”\n\nPor isso a natação é tão importante: seu filho aprende autossalvamento, habilidades da natação e autonomia na água.\nVocê aproveita suas férias com mais tranquilidade e vibra com as conquistas do seu filho na água.\n\nClique no link da bio e comece a preparar seu filho para aproveitar a água com mais autonomia", "metricas": ""}, {"cliente": "Saúde do homem", "titulo": "Sua vida vale mais que um preconceito", "texto": "Mais de 77 mil homens são diagnosticados com câncer de próstata no Brasil por ano.\nE, só em 2024, mais de 17 mil homens morreram em decorrência da doença.\n\nMesmo diante de números tão alarmantes, apenas 25% dos homens com mais de 50 anos haviam feito exame físico ou toque retal no último ano.\n\nMas isso precisa mudar: o câncer de próstata é um dos mais frequentes entre eles.\nE cuidar da saúde também é uma forma de reduzir alguns fatores de risco: praticar atividade física, manter uma alimentação saudável, controlar o peso e não fumar.\n\nAlém disso, o diagnóstico precoce pode ser feito com o exame de toque e as chances do tratamento são muito mais eficazes.\nMas isso ainda é um estigma para os homens, que não fazem por vergonha, preconceito ou medo do julgamento alheio.\n\nEntão, se você tem mais de 50 anos e ainda não se cuidou, sua vida vale mais que um preconceito.", "metricas": ""}, {"cliente": "Natação infantil", "titulo": "Os hormônios de uma aula de natação", "texto": "Esses são os hormônios que seu filho libera em uma aula de natação.\n\nHormônio cortisol: ele ajuda a deixar o seu bebê mais tranquilo, diminuindo os níveis de estresse.\nHormônio GH: auxilia no desenvolvimento muscular e no crescimento infantil.\nHormônio endorfina: está relacionado ao bem-estar e à sensação de relaxamento.\nHormônio dopamina: auxilia no aprendizado e na recompensa.\nSerotonina: participa da regulação do humor e do sono do bebê.\n\nA natação é mais que um esporte: ela ajuda no sono, no crescimento e na diminuição do estresse do seu filho.", "metricas": ""}, {"cliente": "Academia · natação", "titulo": "Aquecida, mas não igual ao seu chuveiro", "texto": "A piscina da Total Energia é aquecida, mas não é igual ao seu chuveiro. E tem um motivo pra isso.\n\nMuita gente chega aqui perguntando: a piscina é aquecida?\nSim, mas a temperatura média é de 28°C e não é por acaso.\n\nÁgua muito quente parece confortável, mas prejudica seu desempenho. Quando o corpo se exercita, ele produz calor. Se a água estiver quente demais, ele não consegue dissipar esse calor, a frequência cardíaca sobe, o cansaço bate mais rápido e o rendimento cai.\n\nPor isso a temperatura ideal para natação fica entre 25°C e 28°C: confortável o suficiente para você entrar sem impacto, mas equilibrada para que sua aula renda de verdade.\n\n28°C é o ponto certo entre conforto e desempenho.\n\nNa Total Energia a piscina é aquecida do jeito certo. Clique no link da bio e comece a nadar.", "metricas": ""}, {"cliente": "IA e governança · LinkedIn", "titulo": "IA no recrutamento com responsabilidade", "texto": "A IA já é amplamente utilizada no recrutamento. A pergunta é: estamos tomando os cuidados necessários para assegurar um uso responsável?\n\nA IA pode automatizar a triagem de currículos, análise de perfis, ranqueamento de candidatos e atendimento via chatbot.\nMas para que a IA seja justa e responsável, ela precisa estar sujeita a uma governança adequada e ser treinada com dados representativos, sem vieses ou preconceitos.\n\nUma preocupação conhecida é a de a IA reforçar situações que queremos mudar. Por exemplo, há determinadas funções e atividades com baixa diversidade e notórias concentrações de gênero, raça, idade ou formação. Se a IA considerar dados das pessoas que ocupam essas funções atualmente, tenderá a incentivar a manutenção do mesmo perfil, frustrando o objetivo de aumento de diversidade e injustamente excluindo do processo seletivo pessoas que poderiam ter um excelente desempenho na função.\n\nNa União Europeia, sistemas de IA aplicados em processos de recrutamento e seleção são permitidos e amplamente utilizados, mas são considerados sistemas de alto risco, o que exige cuidados específicos.\nA legislação requer, por exemplo, que os dados sejam representativos, que haja testes para evitar vieses, supervisão humana efetiva e transparência com os candidatos.\n\nCom a governança adequada, a IA pode tornar o recrutamento mais rápido, escalável e efetivo.\nAntes de implementá-la, verifique:\n→ Gestão de riscos e cibersegurança: há contínua gestão de riscos do sistema de IA desde a concepção até a utilização?\n→ Governança de dados: há representatividade dos dados e mecanismos para evitar vieses e injustiça?\n→ Documentação e registro: o sistema de IA está devidamente registrado, documentado e é auditável?\n→ Supervisão humana: há supervisão humana dos resultados?\n→ Transparência: os candidatos sabem quando a IA participa?\n\nNão é burocracia. É inovação com responsabilidade.\n\nMuito se fala sobre IA no recrutamento do ponto de vista da empresa.\nMas a tecnologia também beneficia os candidatos, que ganham:\n→ Respostas mais rápidas em cada fase do processo;\n→ Orientações claras sobre os próximos passos;\n→ Indicação de vagas mais aderentes ao seu perfil;\n→ Menos espera e mais clareza no processo.\n\nA IA pode agilizar, mas não pode ser opaca.\nO candidato precisa saber quando está interagindo com uma IA e, quando uma decisão o afetar significativamente, tem o direito de entender os critérios que a orientaram e de pedir revisão humana.\n\nTransparência não é obstáculo à inovação.\nÉ o que torna a inovação sustentável.", "metricas": ""}], "projetos": [], "whats": "(31) 99559-0221", "email": "marcelafrancaalmeida@gmail.com", "linkVideos": "https://drive.google.com/drive/folders/1iuV0xsYCQhEBPjyj3VFiGbeJUsTW-zj5?usp=sharing", "linkCopys": "https://docs.google.com/document/d/1RjzBVKBYezM5P_g3PUYaoMESd4GzLF7jb8wmtbQtD4E/edit?tab=t.0#heading=h.vnpekybsp8pk"}</script>
+<script id="code">
+(function(){
+const ORIGINAL=document.getElementById('state').textContent;
+let state=JSON.parse(ORIGINAL);
+let editing=false,canEdit=false,artifact=null,assets=null,busy='';
+const app=document.getElementById('app');
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const f=(path,val,tag='span',cls='')=>`<${tag} class="${cls}" ${editing?`data-field="${path}" contenteditable="true"`:''}>${esc(val)}</${tag}>`;
+const tools=(list,i)=>editing?`<div class="tools"><button data-act="move" data-list="${list}" data-i="${i}" data-d="-1" aria-label="Mover para trás">‹</button><button data-act="move" data-list="${list}" data-i="${i}" data-d="1" aria-label="Mover para frente">›</button><button data-act="del" data-list="${list}" data-i="${i}">Remover</button></div>`:'';
+
+['cursos','designs','videos','numeros','copys','projetos'].forEach(k=>{if(!Array.isArray(state[k]))state[k]=[]});
+const mets=t=>String(t||'').split('\n').map(l=>l.split('|')).filter(p=>p[0].trim()).map(p=>`<div class="met"><b>${esc(p[0].trim())}</b><span>${esc((p[1]||'').trim())}</span></div>`).join('');
+function flip(list,i,x){
+  const front=`<div class="label">${f(`${list}.${i}.cliente`,x.cliente)}</div>${f(`${list}.${i}.titulo`,x.titulo,'h3')}${f(`${list}.${i}.texto`,x.texto,'div','txt')}`;
+  if(editing)return `<article class="fc edit">${tools(list,i)}<div class="face front">${front}</div><div class="face back"><div class="label">Verso · um número por linha (número | o que é)</div>${f(`${list}.${i}.metricas`,x.metricas,'div','mets-raw')}</div></article>`;
+  const longo=String(x.texto||'').length>380;
+  const frontV=`<div class="label">${esc(x.cliente)}</div><h3>${esc(x.titulo)}</h3><div class="txt${longo?' clamp':''}">${esc(x.texto)}</div>${longo?`<button class="more" data-act="more" aria-expanded="false">Ler copy completa</button>`:''}`;
+  return `<div class="fc" data-act="flip" tabindex="0" role="button" aria-pressed="false" aria-label="${esc(x.titulo)}: virar para ver os números"><div class="inner"><div class="face front">${frontV}<span class="hint">Ver números ↻</span></div><div class="face back"><div class="label">${esc(x.cliente)}</div><div class="mets">${mets(x.metricas)||`<div class="met"><b>Em breve</b><span>Resultados desta publicação</span></div>`}</div><span class="hint">Voltar ↻</span></div></div></div>`;
+}
+
+state.designs=state.designs.map(d=>d.slides?d:{titulo:d.titulo,cliente:d.cliente,descricao:'',slides:[{id:d.id,url:d.url}]});
+function carr(d,i){
+  const n=d.slides.length;
+  return `<article class="carr">${tools('designs',i)}
+    <div class="frame" style="aspect-ratio:${/^\d+\/\d+$/.test(d.formato||'')?d.formato:'4/5'}"><div class="track" data-i="${i}">${d.slides.map((sl,j)=>`<img src="${esc(sl.url)}" alt="${esc(d.titulo)}, slide ${j+1} de ${n}" loading="${j<2?'eager':'lazy'}" data-act="zoom">`).join('')}</div>
+    ${n>1?`<button class="nav prev" data-act="slide" data-d="-1" aria-label="Slide anterior">‹</button><button class="nav next" data-act="slide" data-d="1" aria-label="Próximo slide">›</button><span class="count">1/${n}</span>`:''}</div>
+    ${n>1?`<div class="dots" aria-hidden="true">${d.slides.map((_,j)=>`<i class="${j?'':'on'}"></i>`).join('')}</div>`:''}
+    <div class="carr-meta"><div class="label">${f(`designs.${i}.cliente`,d.cliente)}</div>${f(`designs.${i}.titulo`,d.titulo,'h3')}${(d.descricao||editing)?f(`designs.${i}.descricao`,d.descricao,'p'):''}</div>
+    ${editing?`<button class="addbtn" data-act="addslides" data-i="${i}">+ Adicionar slides</button>`:''}
+  </article>`;
+}
+const rowNav=n=>n?`<div class="cnav"><button class="cbtn" data-act="rslide" data-d="-1" aria-label="Anteriores">←</button><span class="ccount">1 de ${n}</span><button class="cbtn" data-act="rslide" data-d="1" aria-label="Próximos">→</button></div>`:'';
+function wireRows(){
+  app.querySelectorAll('.hrow').forEach(r=>{
+    const sec=r.closest('section'),cnt=sec&&sec.querySelector('.ccount');if(!cnt)return;
+    const upd=()=>{const items=[...r.children];if(!items.length)return;const w=items[0].getBoundingClientRect().width+18;const first=Math.round(r.scrollLeft/w);const vis=Math.max(1,Math.round((r.clientWidth+18)/w));const last=Math.min(items.length,first+vis);cnt.textContent=(last>first+1?`${first+1}–${last}`:`${first+1}`)+` de ${items.length}`;sec.querySelectorAll('.cbtn').forEach(b=>{b.disabled=+b.dataset.d<0?r.scrollLeft<4:r.scrollLeft+r.clientWidth>=r.scrollWidth-4})};
+    r.addEventListener('scroll',upd,{passive:true});upd();
+  });
+}
+function wireTracks(){
+  app.querySelectorAll('.track').forEach(t=>{
+    const c=t.closest('.carr'),cnt=c.querySelector('.count'),dots=c.querySelectorAll('.dots i');
+    t.addEventListener('scroll',()=>{const k=Math.round(t.scrollLeft/t.clientWidth);if(cnt)cnt.textContent=(k+1)+'/'+dots.length;dots.forEach((d,j)=>d.classList.toggle('on',j===k))},{passive:true});
+  });
+}
+
+function render(){
+  const s=state, E=editing;
+  document.body.classList.toggle('editing',E);
+  const show=k=>E||s[k].length>0||canEdit;
+  const emptyMsg=(k,txt)=>s[k].length?'':`<div class="empty">${E?txt:'Nada aqui ainda. Toque em Editar portfólio para adicionar.'}</div>`;
+  app.innerHTML=`
+  <div class="wrap">
+    <header class="hero">
+      <div>
+        <div class="label">Portfólio</div>
+        ${f('nome',s.nome,'h1')}
+        <p class="role">${f('idade',s.idade)} <span class="dot">·</span> ${f('titulo',s.titulo)}</p>
+        <div class="label exp-label">Experiência</div>
+        <ol class="exp">${(s.experiencias||[]).map((x,i)=>`<li>${f(`experiencias.${i}.periodo`,x.periodo,'span','per')}<div class="exp-main">${f(`experiencias.${i}.cargo`,x.cargo,'strong')}${(x.onde||E)?f(`experiencias.${i}.onde`,x.onde,'span','onde'):''}</div></li>`).join('')}</ol>
+        <div class="label local">${f('local',s.local)}</div>
+      </div>
+      <div class="arch">
+        ${s.foto?`<img src="${esc(s.foto.url)}" alt="Foto de ${esc(s.nome)}">`:`<span class="mono" aria-hidden="true">MF</span>`}
+        ${E?`<button class="addbtn photo-btn" data-act="up" data-kind="foto">${s.foto?'Trocar foto':'Enviar foto'}</button>`:''}
+      </div>
+    </header>
+    <div class="nichos"><span class="label">Nichos que já atendi</span>
+      ${E?`<span data-field="nichos" contenteditable="true">${esc(s.nichos.join(', '))}</span>`:s.nichos.map(n=>`<span>${esc(n)}</span>`).join('')}
+    </div>
+  </div>
+
+  ${show('cursos')?`<section class="wrap" id="cursos">
+    <div class="sec-head"><div><div class="label">Formação</div><h2>Cursos complementares</h2></div>${E?`<button class="addbtn" data-act="addcurso">+ Adicionar curso</button>`:''}</div>
+    ${emptyMsg('cursos','Adicione seus cursos e certificados.')}
+    <div class="cursos">${s.cursos.map((c,i)=>`<div class="curso">${tools('cursos',i)}${f(`cursos.${i}.nome`,c.nome,'strong')}${(c.onde||E)?f(`cursos.${i}.onde`,c.onde||(E?'Instituição · ano':''),'span'):''}</div>`).join('')}</div>
+  </section>`:''}
+
+  ${show('designs')?`<section class="wrap" id="designs">
+    <div class="sec-head"><div><div class="label">Design · carrosséis</div><h2>Portfólio de design</h2></div>${E?`<button class="addbtn" data-act="newcarr">+ Adicionar carrossel</button>`:`<span class="label">Arraste ou use as setas</span>`}</div>
+    ${rowNav(s.designs.length)}<div class="carrs hrow">${s.designs.map((d,i)=>carr(d,i)).join('')}${(E||canEdit)?Array.from({length:Math.max(0,3-s.designs.length)},()=>`<button class="slot" data-act="newcarr"><span>+ Espaço para mais um carrossel<br><small>Selecione todos os slides de uma vez</small></span></button>`).join(''):''}</div>
+  </section>`:''}
+
+  ${show('videos')?`<section class="wrap" id="videos">
+    <div class="sec-head"><div><div class="label">Vídeo</div><h2>Portfólio de vídeos</h2></div>${E?`<button class="addbtn" data-act="up" data-kind="videos">+ Adicionar vídeos</button>`:(s.linkVideos?`<a class="more" href="${esc(s.linkVideos)}" target="_blank" rel="noopener">Ver todos os vídeos</a>`:'')}</div>
+    ${emptyMsg('videos','Envie seus Reels e vídeos (até 20 MB cada; exporte do CapCut em 720p se passar disso).')}
+    ${rowNav(s.videos.length)}<div class="reels hrow">${s.videos.map((v,i)=>`<div class="reel">${tools('videos',i)}<video src="${esc(v.url)}${v.poster?'':'#t=0.1'}" ${v.poster?`poster="${esc(v.poster)}"`:''} controls playsinline preload="${v.poster?'none':'metadata'}"></video></div>`).join('')}</div>
+  </section>`:''}
+
+  ${show('numeros')?`<section class="wrap" id="numeros">
+    <div class="sec-head"><div><div class="label">Resultados</div><h2>Melhores números</h2></div>${E?`<button class="addbtn" data-act="addnum">+ Adicionar card</button>`:`<span class="label">Toque no card para virar</span>`}</div>
+    ${emptyMsg('numeros','Crie um card por cliente ou nicho: na frente, o contexto; no verso, os números.')}
+    ${rowNav(s.numeros.length)}<div class="fcards hrow">${s.numeros.map((x,i)=>flip('numeros',i,x)).join('')}</div>
+  </section>`:''}
+
+  ${show('copys')?`<section class="wrap" id="copys">
+    <div class="sec-head"><div><div class="label">Copywriting</div><h2>Melhores copys</h2></div>${E?`<button class="addbtn" data-act="addcopy">+ Adicionar copy</button>`:(s.linkCopys?`<a class="more" href="${esc(s.linkCopys)}" target="_blank" rel="noopener">Portfólio completo de copy</a>`:'')}</div>
+    ${emptyMsg('copys','Na frente, a copy que você escreveu; no verso, os números que ela trouxe.')}
+    ${rowNav(s.copys.length)}
+    <div class="fcards hrow">${s.copys.map((x,i)=>flip('copys',i,x)).join('')}</div>
+  </section>`:''}
+
+  ${show('projetos')?`<section class="wrap" id="projetos">
+    <div class="sec-head"><div><div class="label">Faculdade</div><h2>Projetos acadêmicos</h2></div>${E?`<button class="addbtn" data-act="addproj">+ Adicionar projeto</button>`:''}</div>
+    ${emptyMsg('projetos','Adicione trabalhos e projetos da faculdade de Publicidade e Propaganda.')}
+    <div class="copys">${s.projetos.map((p,i)=>`<article class="copy">${tools('projetos',i)}<div class="label">${f(`projetos.${i}.contexto`,p.contexto)}</div>${f(`projetos.${i}.titulo`,p.titulo,'h3')}${f(`projetos.${i}.texto`,p.texto,'div','txt')}</article>`).join('')}</div>
+  </section>`:''}
+
+  <section class="contato"><div class="wrap">
+    <div class="label">Contato</div>
+    <h2>Bora conversar sobre o seu perfil?</h2>
+    <div class="c-grid">
+      <a class="btn solid" href="https://wa.me/55${esc(s.whats.replace(/\D/g,''))}" target="_blank" rel="noopener">WhatsApp · ${f('whats',s.whats)}</a>
+      <span class="btn"><span class="c-mail">${f('email',s.email)}</span></span>
+      ${E?'':`<button class="btn" data-act="copymail">Copiar e-mail</button>`}
+    </div>
+  </div></section>
+  <footer class="wrap">© ${new Date().getFullYear()} ${esc(s.nome)}</footer>
+
+  ${E?`<div class="bar"><span class="msg">${esc(busy)||'Clique nos textos tracejados para editar.'}</span><button class="btn" data-act="cancel">Cancelar</button><button class="btn solid" data-act="save">Salvar e publicar</button></div>`
+     :(canEdit?`<button class="btn fab" data-act="edit">Editar portfólio</button>`:'')}
+  `;
+  wireTracks();wireRows();
+}
+
+function setPath(p,v){
+  if(p==='nichos'){state.nichos=v.split(',').map(x=>x.trim()).filter(Boolean);return}
+  const k=p.split('.');let o=state;for(let i=0;i<k.length-1;i++)o=o[k[i]];o[k[k.length-1]]=v;
+}
+app.addEventListener('input',e=>{const el=e.target.closest('[data-field]');if(el)setPath(el.dataset.field,el.innerText.trim())});
+app.addEventListener('paste',e=>{if(!e.target.closest('[data-field]'))return;e.preventDefault();document.execCommand('insertText',false,(e.clipboardData||{}).getData?.('text/plain')||'')});
+
+const picker=document.createElement('input');picker.type='file';picker.hidden=true;document.body.appendChild(picker);
+let pickKind='',pickIndex=null;
+picker.addEventListener('change',async()=>{
+  const files=[...picker.files].sort((a,b)=>a.name.localeCompare(b.name,undefined,{numeric:true}));picker.value='';
+  let target=(pickKind==='designs'&&pickIndex!=null)?state.designs[pickIndex]:null;
+  for(const file of files){
+    if(file.size>20*1024*1024){busy=`“${file.name}” passa de 20 MB. Comprima e tente de novo.`;render();continue}
+    busy=`Enviando ${file.name}…`;render();
+    try{
+      const r=await assets.upload(file);
+      const item={id:r.id,url:r.url,titulo:file.name.replace(/\.[^.]+$/,''),cliente:'Cliente'};
+      if(pickKind==='foto')state.foto={id:r.id,url:r.url};
+      else if(pickKind==='designs'){if(!target){let formato='4/5';try{const bm=await createImageBitmap(file);formato=bm.height/bm.width>1.5?'9/16':(bm.height/bm.width<1.1?'1/1':'4/5')}catch(_){}target={titulo:'Nome do carrossel',cliente:'Cliente · nicho',descricao:'Conte o objetivo e a estratégia deste carrossel.',formato,slides:[]};state.designs.push(target)}target.slides.push({id:r.id,url:r.url})}
+      else state[pickKind].push(item);
+      busy='Enviado. Lembre de salvar e publicar.';
+    }catch(err){busy='Não deu para enviar '+file.name+'. Tente novamente.'}
+    render();
+  }
+});
+
+async function save(){
+  busy='Salvando…';render();
+  const reset=(document.head.querySelector('style')||{}).textContent||'';
+  const parts=[document.querySelector('title').outerHTML,'<meta name="claude:viewport-fit-sides" content="cover">',document.getElementById('fonts').outerHTML,document.getElementById('css').outerHTML,'<div id="app"></div>','<script type="application/json" id="state">'+JSON.stringify(state).replace(/</g,'\\u003c')+'<\/script>','<script id="code">'+document.getElementById('code').textContent+'<\/script>'];
+  const html='<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>'+reset+'</style></head><body>'+parts.join('\n')+'</body></html>';
+  try{await artifact.publish(html);busy='Publicado.'}catch(err){busy=err&&err.code==='conflict'?'Outra versão foi salva antes. Recarregando…':'Não foi possível salvar agora. Tente de novo.';render()}
+}
+
+app.addEventListener('click',async e=>{
+  const b=e.target.closest('[data-act]');if(!b)return;const a=b.dataset.act;
+  if(a==='edit'){editing=true;busy='';render()}
+  else if(a==='cancel'){state=JSON.parse(ORIGINAL);editing=false;busy='';render()}
+  else if(a==='save')save();
+  else if(a==='newcarr'||a==='addslides'){if(!editing){editing=true;busy='';render()}pickKind='designs';pickIndex=a==='addslides'?+b.dataset.i:null;picker.accept='image/*';picker.multiple=true;picker.click()}
+  else if(a==='slide'){const t=b.closest('.frame').querySelector('.track');t.scrollBy({left:+b.dataset.d*t.clientWidth,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})}
+  else if(a==='up'){pickKind=b.dataset.kind;pickIndex=null;picker.accept=pickKind==='videos'?'video/*':'image/*';picker.multiple=pickKind!=='foto';picker.click()}
+  else if(a==='addcopy'){state.copys.push({cliente:'Cliente · nicho',titulo:'Título da copy',texto:'Cole aqui a sua legenda, roteiro ou texto de carrossel.',metricas:'+00 mil | alcance\n+00% | engajamento'});render()}
+  else if(a==='addnum'){state.numeros.push({cliente:'Nicho · cliente',titulo:'O que foi feito',texto:'Explique o desafio e a estratégia que você usou.',metricas:'+00 mil | visualizações\n+000 | novos seguidores\n+00% | engajamento'});render()}
+  else if(a==='addcurso'){state.cursos.push({nome:'Nome do curso',onde:''});render()}
+  else if(a==='addproj'){state.projetos.push({contexto:'Disciplina · período',titulo:'Nome do projeto',texto:'Conte o desafio, o que você fez e o resultado.'});render()}
+  else if(a==='rslide'){const r=b.closest('section').querySelector('.hrow');const c=r.querySelector(':scope>*');const step=c?c.getBoundingClientRect().width+18:r.clientWidth;r.scrollBy({left:+b.dataset.d*step,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})}
+  else if(a==='more'){const t=b.parentElement.querySelector('.txt');const on=t.classList.toggle('open');b.textContent=on?'Mostrar menos':'Ler copy completa';b.setAttribute('aria-expanded',on)}
+  else if(a==='flip'){const on=b.classList.toggle('flipped');b.setAttribute('aria-pressed',on)}
+  else if(a==='del'){state[b.dataset.list].splice(+b.dataset.i,1);render()}
+  else if(a==='move'){const L=state[b.dataset.list],i=+b.dataset.i,j=i+ +b.dataset.d;if(j>=0&&j<L.length){[L[i],L[j]]=[L[j],L[i]];render()}}
+  else if(a==='zoom'&&!editing){const lb=document.createElement('div');lb.className='lb';lb.innerHTML=`<img src="${esc(b.src)}" alt="">`;lb.onclick=()=>lb.remove();document.body.appendChild(lb)}
+  else if(a==='copymail'){try{await navigator.clipboard.writeText(state.email);b.textContent='E-mail copiado'}catch(_){const r=document.createRange();r.selectNodeContents(app.querySelector('.c-mail'));getSelection().removeAllRanges();getSelection().addRange(r)}}
+});
+app.addEventListener('play',e=>{if(e.target.tagName==='VIDEO')app.querySelectorAll('video').forEach(v=>{if(v!==e.target)v.pause()})},true);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelector('.lb')?.remove();
+  const c=e.target.closest&&e.target.closest('.fc[data-act="flip"]');if(c&&(e.key==='Enter'||e.key===' ')){e.preventDefault();c.click()}});
+
+render();
+(async()=>{
+  if(!window.claude||!window.claude.use)return;
+  const [ar,as,us]=await Promise.all([claude.use('artifact'),claude.use('assets'),claude.use('user')]);
+  artifact=ar;assets=as;
+  canEdit=!!(ar&&as)&&(us?(us.canEdit()!==false):true);
+  render();
+})();
+})();
+</script>
+
+</body>
+</html>
